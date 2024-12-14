@@ -18,7 +18,7 @@ This project utilizes machine learning to predict the risk of heart disease base
 This project predicts whether a person is at risk of heart disease based on their health conditions, using various machine learning algorithms including:
 - Logistic Regression
 - K-Nearest Neighbors (KNN)
-- Support Vector Machine (SVM)
+- Support Vector Machine (SVM) with different kernels
 - Random Forest
 - Naive Bayes
 - Decision Tree
@@ -37,12 +37,12 @@ The app allows users to input health-related details, which are then processed t
 The model was trained on a dataset containing information about various health parameters. The following classifiers were used:
 - Logistic Regression
 - K-Nearest Neighbors (KNN)
-- Support Vector Machine (SVM)
+- Support Vector Machine (SVM) with different kernels (Linear and RBF)
 - Naive Bayes
 - Decision Tree
 - Random Forest
 
-After training, the models were evaluated using accuracy metrics, and the **Decision Tree** and **Random Forest** models showed the highest accuracy and were selected for deployment.
+After training, the models were evaluated using accuracy metrics, and the **Decision Tree**, **Random Forest**, and **SVM (RBF)** models showed the highest accuracy and were selected for deployment.
 
 ## How to Run the App
 
@@ -67,9 +67,9 @@ After training, the models were evaluated using accuracy metrics, and the **Deci
    ```
 
 ## Features
-- **User Inputs**: Users can enter details like age, sex, chest pain type, blood pressure, cholesterol, and other health-related symptoms
-- **Prediction**: After submitting the form, the app will display whether the person is at risk of heart disease
-- **Real-time Results**: Predictions are displayed immediately based on the input data
+- **User Inputs**: Users can enter details like age, sex, chest pain type, blood pressure, cholesterol, and other health-related symptoms.
+- **Prediction**: After submitting the form, the app will display whether the person is at risk of heart disease.
+- **Real-time Results**: Predictions are displayed immediately based on the input data.
 
 ## Output Screens
 ![Screenshot 2024-12-14 155914](https://github.com/user-attachments/assets/b3792b17-836a-4c5c-833c-2081b7aad001)
@@ -78,23 +78,26 @@ After training, the models were evaluated using accuracy metrics, and the **Deci
 ## Model Evaluation
 The models were evaluated using accuracy metrics:
 
-| Classifier | Accuracy |
-|-----------|----------|
-| Logistic Regression | 86.34% |
-| KNN | 74.63% |
-| SVM | 60.00% |
-| Kernel SVM | 52.20% |
-| Naive Bayes | 85.37% |
-| Decision Tree | 100% |
-| Random Forest | 100% |
+| Classifier             | Accuracy    |
+|------------------------|-------------|
+| **SVM (RBF)**           | 100.00%     |
+| **Decision Tree**       | 100.00%     |
+| **Random Forest**       | 100.00%     |
+| **K-Nearest Neighbors** | 98.05%      |
+| **Logistic Regression** | 86.34%      |
+| **Naive Bayes**         | 85.37%      |
+| **SVM (Linear)**        | 83.90%      |
 
-**Best Model**: Decision Tree and Random Forest, both with an accuracy of **100%**, as Decision Tree model may lead to overfitting we prefer Random Forest.
+**Best Models**: **SVM (RBF)**, **Decision Tree**, and **Random Forest** all achieved 100% accuracy, with **Random Forest** being preferred for its robustness and reduced risk of overfitting.
 
 ## Recommendations
 Based on the accuracy results:
-- **Decision Tree** and **Random Forest** are the best models and are recommended for deployment
-- **Logistic Regression** and **Naive Bayes** are also strong contenders
-- **KNN**, **SVM**, and **Kernel SVM** show lower performance and are not recommended for production
+- **Best Models**: **Random Forest**, **SVM (RBF)**, and **Decision Tree** are the top-performing models with an accuracy of **100%**. **Random Forest** is recommended due to its ensemble nature, which reduces overfitting.
+- **Second Best Model**: **K-Nearest Neighbors (KNN)** with an accuracy of **98.05%**.
+- **Third Best Model**: **Logistic Regression** with an accuracy of **86.34%**, offering strong performance and interpretability.
+- **Other Models**:
+  - **Naive Bayes**: Accuracy of **85.37%**, fast and simple but with slightly lower accuracy.
+  - **SVM (Linear)**: Accuracy of **83.90%**, could be improved with tuning or more feature engineering.
 
 ## Author
 This Heart Disease Prediction Model was developed by:
@@ -102,4 +105,4 @@ This Heart Disease Prediction Model was developed by:
 - Repository: https://github.com/katakampranav/Heart-Disease-Prediction-Model.git
 
 ## Feedback
-For any feedback or queries, please reach out to me at katakampranavshankar@gmail.com.
+For any feedback or queries, please reach out to me at katakampranavshankar@gmail.com. 
