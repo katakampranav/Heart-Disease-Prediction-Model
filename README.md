@@ -71,6 +71,10 @@ After training, the models were evaluated using accuracy metrics, and the **Deci
 - **Prediction**: After submitting the form, the app will display whether the person is at risk of heart disease
 - **Real-time Results**: Predictions are displayed immediately based on the input data
 
+## Output Screens
+![Screenshot 2024-12-14 155914](https://github.com/user-attachments/assets/b3792b17-836a-4c5c-833c-2081b7aad001)
+![Screenshot 2024-12-14 155948](https://github.com/user-attachments/assets/9d2f836f-b33e-4556-93c8-0831ffce5530)
+
 ## Model Evaluation
 The models were evaluated using accuracy metrics:
 
